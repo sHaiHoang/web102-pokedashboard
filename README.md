@@ -1,58 +1,55 @@
-# Web Development Project 5 - PokéDash
+# Web Development Project 6 - PokéDash
 
 Submitted by: **Hai Hoang**
 
-This web app: **displays a themed dashboard of Pokémon using data from the PokéAPI. Users can view stats, search Pokémon by name, and filter them by type. The design is styled with a retro Pokémon theme for a fun and nostalgic user experience.**
+This web app: **displays a Pokémon dashboard that allows users to explore 50 different Pokémon using data fetched from the PokéAPI. Users can search and filter Pokémon, view charts of their stats, and click into each Pokémon to see a detailed page with additional information. The app uses React Router for navigation and Recharts for data visualizations, all wrapped in a retro-themed UI.**
 
-Time spent: **6 hours spent in total**
+Time spent: **5 hours spent in total**
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [x] **The site has a dashboard displaying a list of data fetched using an API call**
-  - The dashboard displays 50 unique Pokémon, one per row (in grid format)
-  - Each row shows at least two features: name, sprite image, and type
-- [x] **`useEffect` React hook and `async`/`await` are used**
-- [x] **The app dashboard includes at least three summary statistics about the data** 
-  - The app displays:
-    - Total number of Pokémon fetched
-    - Average HP
-    - Average Attack
-- [x] **A search bar allows the user to search for an item in the fetched data**
-  - The search bar correctly filters Pokémon by name
-  - The list dynamically updates as the user types
-- [x] **An additional filter allows the user to restrict displayed items by specified categories**
-  - The filter allows users to choose Pokémon by type (e.g., fire, water)
-  - The list correctly updates based on the selected type
+- [x] **Clicking on an item in the list view displays more details about it**
+  - Clicking on an item in the dashboard list navigates to a detail view for that item
+  - Detail view includes extra information about the item not included in the dashboard view (e.g., height, weight, base XP, abilities, full stat list)
+  - The same sidebar is displayed in detail view as in dashboard view
+  - *Sidebar is visible in the video walkthrough for accurate grading*
+- [x] **Each detail view of an item has a direct, unique URL link to that item’s detail view page**
+  - *URL/address bar is shown in the walkthrough recording*
+- [x] **The app includes at least two unique charts developed using the fetched data that tell an interesting story**
+  - Chart 1: Bar chart of HP stats by Pokémon
+  - Chart 2: Bar chart of Attack stats by Pokémon
+  - Charts appear in the dashboard view
+
+## Optional Features
 
 The following **optional** features are implemented:
 
-- [ ] Multiple filters can be applied simultaneously
-- [ ] Filters use different input types
-- [ ] The user can enter specific bounds for filter values
+- [x] The dashboard is visually customized and styled with a retro Pokémon theme
+- [ ] The site allows users to toggle between different data visualizations
 
-The following **additional** features are implemented:
+## Additional Features
 
-* [x] Themed UI based on the Pokémon franchise (retro fonts, colors, and backgrounds)
 * [x] Hover animations on Pokémon cards
-* [x] Responsive layout for various screen sizes
+* [x] Responsive grid layout for different screen sizes
+* [x] Search and type filter update results live
+* [x] Sidebar navigation design carried over from Part 1
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='./pokemon-dashboard.mp4' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='pokemon-dashboardGIF.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with ezgif
 
 ## Notes
 
-Describe any challenges encountered while building the app.
-
-- Fetching individual Pokémon data in parallel using `Promise.all` was tricky to set up efficiently.
-- Designing the layout that looks good.
-- Creating clean filter/search logic that didn’t conflict.
+Challenges encountered while building the app:
+- Working with nested data from PokéAPI and rendering multiple API calls in parallel using `Promise.all`
+- Integrating Recharts and keeping the layout clean and readable
+- Ensuring URL routing worked on refresh and directly typing in detail URLs
 
 ## License
 
